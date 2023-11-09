@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+			<div id="posts-list" class="cf"> 
+			
+				<article>
+					<div class="feature-image">
+						<a href="single.html" ><img src="{{asset(evenement.image)}}" alt="Thumbnail" /></a>
+						<div class="entry-date">
+						<span class="number">{{evenement.date|date('d')}}</span>
+						<span class="month">{{evenement.date|date('m')}}</span>
+						</div>
+
+					</div>
+					<div class="excerpt">
+						<a href="single.html" class="post-heading" >{{evenement.nom}}</a>
+						<p>
+                        {{evenement.description}}
+						</p>
+						
+					</div>
+					<i class="tape"></i>
+					<a class="link-button green" href="{{ path('app_panier', {'nom': evenement.nom}) }}">reservations evenements</a>
+
+				</article>
+				
+								
+			
+			</div>
+		
+
+
+{% endblock %}

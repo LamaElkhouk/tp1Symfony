@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+			<!-- posts list -->
+			<div id="posts-list" class="cf"> 
+
+			<!-- un evenement de teste -->
+			<article>
+				<div class="feature-image">
+						<a href="#" ><img src="{{unEvenement.image}}" alt="Thumbnail" /></a>
+						<div class="entry-date">{{unEvenement.date|date('Y-m-d')}}</div>
+					</div>
+					<div class="excerpt">
+						<a href="#" class="post-heading" >{{unEvenement.nom}}</a>
+						<p>
+						{{unEvenement.description}}
+						</p>
+					</div>
+					<i class="tape"></i>
+			</article>
+			<!-- fin du teste -->
+			{% for e in listeEvenement|slice(0, 6) %}
+		
+				<article>
+						<div class="feature-image">
+							<a href="{{ path('app_single', {'nom': e.nom}) }}" ><img src="{{e.image}}" alt="Thumbnail" /></a>
+							<div class="entry-date">{{e.date|date('Y-m-d')}}</div>
+						</div>
+						<div class="excerpt">
+							<a href="#" class="post-heading" >{{e.nom}}</a>
+							<p>
+							{{e.description|u.truncate(20)}}
+							</p>
+						</div>
+						<i class="tape"></i>
+						<a href="{{ path('app_single', {'nom': e.nom}) }}"> details evenements</a>
+						<a class="link-button green" href="{{ path('app_panier', {'nom': e.nom}) }}">reservations evenements</a>
+
+					</article>
+			{% endfor %}
+						
+		    </div>
+			<!-- ENDS posts list -->
+		
+
+
+{% endblock %}

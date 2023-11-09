@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Tp1 symfony{% endblock %}</title> 
+        <!-- Mobile viewport optimized: h5bp.com/viewport -->
+	<meta name="viewport" content="width=device-width, initial-scale=1"/>
+	
+	<link rel="stylesheet" media="screen" href="{{ asset('css/superfish.css')}}" /> 
+	<link rel="stylesheet" href="{{ asset('css/nivo-slider.css')}}" media="all"  /> 
+	<link rel="stylesheet" href="{{ asset('css/tweet.css')}}" media="all"  />
+	<link rel="stylesheet" href="{{ asset('css/style.css')}}">
+	<link rel="stylesheet" media="all" href="{{ asset('css/lessframework.css')}}"/>
+	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade&display=swap" rel="stylesheet"> 
+	
+	<!-- JavaScript at the bottom for fast page loading -->
+	
+	<script src="{{asset('js/jquery-1.7.1.min.js')}}" defer></script>
+	
+	<!-- scripts concatenated and minified via build script -->
+	<script src="{{ asset('js/custom.js')}}" defer></script>
+	
+	<!-- superfish -->
+	<script  src="{{ asset('js/superfish-1.4.8/js/hoverIntent.js')}}" defer></script>
+	<script  src="{{ asset('js/superfish-1.4.8/js/superfish.js')}}" defer></script>
+	<script  src="{{ asset('js/superfish-1.4.8/js/supersubs.js')}}" defer></script>
+	<!-- ENDS superfish -->
+	
+	<script src="{{ asset('js/tweet/jquery.tweet.js')}}" defer></script>
+	<script src="{{ asset('js/jquery.isotope.min.js')}}" defer></script>
+	<script src="{{ asset('js/jquery.nivo.slider.js')}}" defer></script>
+	<script src="{{ asset('js/css3-mediaqueries.js')}}" defer></script>
+	<script src="{{ asset('js/tabs.js')}}" defer></script>
+	<script  src="{{ asset('js/poshytip-1.1/src/jquery.poshytip.min.js')}}" defer></script>
+	<!-- end scripts -->
+        {% block stylesheets %}
+        {% endblock %}
+
+        {% block javascripts %}
+        {% endblock %}
+    </head>
+    <body>
+        <!-- HEADER -->
+            <header>
+                
+                <!-- header wrapper -->
+                <div class="wrapper cf">
+                    <div id="logo">
+                        <a href="index.html"><h1>=SYMFONY TEMPLATE=</h1></a>
+                    </div>
+                </div><!-- ENDS header wrapper -->
+                
+                
+                
+                <!-- nav -->
+                <nav class="cf">
+                    <div class="wrapper cf">
+                        <ul id="nav" class="sf-menu">
+                            <li >
+                            <li class="{% if app.request.attributes.get('_route') == 'app_homepage' %}current-menu-item{% endif %}"><a href="{{path('app_homepage')}}">ACCUEIL<i><b></b></i></a></li>
+                            <li><a href="#">A PROPOS<i><b></b></i></a></li>
+                            <li class="{% if app.request.attributes.get('_route') == 'app_evenements' %}current-menu-item{% endif %}"><a href="{{path('app_evenements')}}">EVENEMENTS<i><b></b></i></a></li>
+                            <li class="{% if app.request.attributes.get('_route') == 'app_contact' %}current-menu-item{% endif %}"><a href="{{path('app_contact')}}">CONTACT<i><b></b></i></a></li>
+                        </ul>
+                        <div id="combo-holder"></div>
+                    </div>
+                </nav>
+                <!-- ends nav -->
+                    
+            </header>
+	    <!-- ENDS HEADER -->
+    	<!-- MAIN -->
+	<main>
+		<div class="wrapper">
+
+        {% block body %}{% endblock %}
+        </div>
+    </main>
+        <footer>
+	
+		<!-- wrapper -->
+		<div class="wrapper cf">	
+			<div id="footer-bottom">TP1 Template designed by <a href="#" >The Boss</a></div>
+		</div><!-- ENDS wrapper -->
+
+	</footer>
+    </body>
+</html>

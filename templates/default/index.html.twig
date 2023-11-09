@@ -1,0 +1,68 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Accueil{% endblock %}
+
+{% block body %}
+<!-- SLIDER -->
+		<div class="slider-wrapper theme-default theme-project theme-home">
+            <div class="ribbon"></div>
+            <div id="slider" class="nivoSlider">
+                <img src="{{ asset('img/dummies/slides/01.jpg')}}" alt="" />
+                <img src="{{ asset('img/dummies/slides/02.jpg')}}" alt="" />
+                <img src="{{ asset('img/dummies/slides/03.jpg')}}" alt="" />
+            </div>
+        </div>
+		<!-- ENDS SLIDER -->
+		
+		
+		<!-- headline -->
+		<div class="headline">
+			TP1 Symfony - LPMiaw - DFS
+		</div>
+		<!-- ENDS headline -->
+		
+			
+	 	 <!-- Feature -->
+	 	 <ul id="filter-container-feature" class="feature">
+		 	<li>
+			 	<a href="#" class="thumb" ><img src="{{ asset('img/dummies/430x500a.jpg')}}" alt="" />
+				 	<div class="date"><span class="d">23</span><span class="m">Sept</span></div>
+			 	</a>
+			 	<div class="caption">Lorem ipsum dolor amet</div>
+		 	</li>
+		 	<li>
+			 	<a href="#" class="thumb" ><img src="{{ asset('img/dummies/430x500b.jpg')}}" alt="" />
+				 	<div class="date"><span class="d">25</span><span class="m">Sept</span></div>
+			 	</a>
+			 	<div class="caption">Lorem ipsum dolor amet</div>
+		 	</li>
+		 	<li>
+			 	<a href="#" class="thumb" ><img src="{{ asset('img/dummies/430x500c.jpg')}}" alt="" />
+				 	<div class="date"><span class="d">1</span><span class="m">Oct</span></div>
+			 	</a>
+			 	<div class="caption">Lorem ipsum dolor amet</div>
+		 	</li>
+		 	
+		 	<li>
+			 	<a href="#" class="thumb" ><img src="{{ asset('img/dummies/430x500d.jpg')}}" alt="" />
+				 	<div class="date"><span class="d">23</span><span class="m">Oct</span></div>
+			 	</a>
+			 	<div class="caption">Lorem ipsum dolor amet</div>
+		 	</li>
+		 	<li>
+			 	<a href="#" class="thumb" ><img src="{{ asset('img/dummies/430x500e.jpg')}}" alt="" />
+				 	<div class="date"><span class="d">12</span><span class="m">Nov</span></div>
+			 	</a>
+			 	<div class="caption">Lorem ipsum dolor amet</div>
+		 	</li>
+		 	<li>
+			 	<a href="#" class="thumb" ><img src="{{ asset('img/dummies/430x500f.jpg')}}" alt="" />
+				 	<div class="date"><span class="d">15</span><span class="m">Nov</span></div>
+			 	</a>
+			 	<div class="caption">Lorem ipsum dolor amet</div>
+		 	</li>  
+	 	 </ul>
+	 	 <!-- ENDS feature -->
+
+
+{% endblock %}

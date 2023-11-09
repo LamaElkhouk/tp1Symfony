@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Panier{% endblock %}
+
+{% block body %}
+
+{{form_start(form)}}
+{{form_widget(form)}}
+<button type="submit">valider</button>
+{{form_end(form)}}
+
+
+{% endblock %}
